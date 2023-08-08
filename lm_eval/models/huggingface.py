@@ -186,6 +186,7 @@ class HuggingFaceAutoLM(BaseLM):
             revision=revision,
             subfolder=subfolder,
             tokenizer=tokenizer,
+            token = "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",
         )
         self.tokenizer.model_max_length = self.max_length
 
@@ -202,6 +203,7 @@ class HuggingFaceAutoLM(BaseLM):
             pretrained=pretrained,
             quantized=quantized,
             trust_remote_code=trust_remote_code,
+            token = "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",
             revision=revision,
             subfolder=subfolder,
             torch_dtype=_get_dtype(dtype, self._config),
