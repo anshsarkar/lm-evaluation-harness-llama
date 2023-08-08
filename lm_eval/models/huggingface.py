@@ -253,7 +253,6 @@ class HuggingFaceAutoLM(BaseLM):
                 device_map="auto",
                 load_in_8bit=True,
                 trust_remote_code = trust_remote_code,
-                token = "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",
             )
         else:
             from auto_gptq import AutoGPTQForCausalLM
@@ -293,7 +292,6 @@ class HuggingFaceAutoLM(BaseLM):
             load_in_8bit=load_in_8bit,
             trust_remote_code=trust_remote_code,
             torch_dtype=torch_dtype,
-            token = "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",
         )
         return model
 
@@ -309,7 +307,6 @@ class HuggingFaceAutoLM(BaseLM):
         tokenizer = self.AUTO_TOKENIZER_CLASS.from_pretrained(
             pretrained if tokenizer is None else tokenizer,
             revision=revision + ("/" + subfolder if subfolder is not None else ""),
-            token = "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",
         )
         tokenizer.pad_token = tokenizer.eos_token
         return tokenizer
